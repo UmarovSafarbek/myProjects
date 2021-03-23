@@ -33,15 +33,6 @@ menu_btn.addEventListener("click", function(e){
 
 
 
-
-
-
-
-
-
-
-
-
 function totalMoney() {
     let sum = document.getElementById("number_money").value;
 
