@@ -1,3 +1,9 @@
+if(window.innerWidth < 1100) {
+    document.body.innerHTML = ("<h1>You are not able to see this sito on phone</h1>");
+    throw new Error("You are not able to see this sito on phone");
+}
+
+
 const dateEl = document.getElementById("date");
 const date = new Date();
 const month = ["Январ", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь"
@@ -44,49 +50,50 @@ function totalMoney() {
     name_con = name_con.toLowerCase();
     name_coned = name_coned.toLowerCase();
 
+    if(name_con == "use" && name_coned == 'rub') {
+        sum = sum * 79.9497;
+    } else if (name_con == "use" && name_coned == 'tjk') {
+        sum = sum * 9.65302;
+    } else if(name_con == "use" && name_coned == 'euro') {
+        sum = sum * 0.93446;
+    } else if(name_con == "use" && name_coned == 'use') {
+        sum = sum * 1;
+    } else if(name_con == "tjk" && name_coned == 'euro') {
+        sum = sum * 0.09565;
+    } else if(name_con == "tjk" && name_coned == 'use') {
+        sum = sum * 0.10236;
+    } else if(name_con == "tjk" && name_coned == 'tjk') {
+        sum = sum * 1;
+    } else if(name_con == "euro" && name_coned == 'tjk') {
+        sum = sum * 10.3204;
+    } else if(name_con == "euro" && name_coned == 'use') {
+        sum = sum * 1.06914;
+    } else if(name_con == "euro" && name_coned == 'euro') {
+        sum = sum * 1;
+    } else if(name_con == "euro" && name_coned == 'rub') {
+        sum = sum * 85.4774;
+    } else if(name_con == "rub" && name_coned == 'euro') {
+        sum = sum * 0.01168;
+    } else if(name_con == "rub" && name_coned == 'use'){
+        sum = sum * 0.01250;
+    } else if(name_con == "rub" && name_coned == 'tjk') {
+        sum = sum * 0.12065;
+    } else if(name_con == "rub" && name_coned == 'rub') {
+        sum = sum * 1;
+    }
+
     switch (true) {
-        case name_con == "use" && name_coned == 'rub':
-            sum = sum * 79.9497;
-            break;
-        case name_con == "use" && name_coned == 'tjk':
-            sum = sum * 9.65302;
-            break;
-        case name_con == "use" && name_coned == 'euro':
-            sum = sum * 0.93446;
-            break;
-        case name_con == "use" && name_coned == 'use':
-            sum = sum * 1;
-            break;
-        case name_con == "tjk" && name_coned == 'euro':
-            sum = sum * 0.09565;
-            break;
-        case name_con == "tjk" && name_coned == 'use':
-            sum = sum * 0.10236;
-            break;
-        case name_con == "tjk" && name_coned == 'tjk':
-            sum = sum * 1;
-            break;
-        case name_con == "euro" && name_coned == 'tjk':
-            sum = sum * 10.3204;
-            break;
-        case name_con == "euro" && name_coned == 'use':
-            sum = sum * 1.06914;
-            break;
-        case name_con == "euro" && name_coned == 'euro':
-            sum = sum * 1;
-            break;
-        case name_con == "euro" && name_coned == 'rub':
-            sum = sum * 85.4774;
-            break;
-        case name_con == "rub" && name_coned == 'euro':
-            sum = sum * 0.01168;
-            break;
-        case name_con == "rub" && name_coned == 'use':
-            sum = sum * 0.01250;
-            break;
-        case name_con == "rub" && name_coned == 'tjk':
-            sum = sum * 0.12065;
-            break;
+       
+   
+       
+        
+ 
+       
+      
+        
+     
+  
+     
         case name_con == "rub" && name_coned == 'rub':
             sum = sum * 1;
             break;
